@@ -5,8 +5,6 @@ const xp = require('./xp.json')
 const fs = require('fs');
 const TOKEN = process.env.token
 
-const Token = "NTQ5NDE1NzEyNzY3MDgyNTA3.D1Tjmw.TDCW4hrKHZ5k45lHnqCkv4EpbC4";
-
 var XPmin = 3;
 var XPmax = 7; 
 var XPneeded = 300; //Change is level.js
@@ -206,4 +204,4 @@ bot.on ('message', (message) => {
   //Picture-END
 });
 
-bot.login(Token); //Change DELETE Token and use TOKEN
+bot.login(TOKEN); //Change DELETE Token and use TOKEN
