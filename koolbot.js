@@ -36,13 +36,13 @@ bot.on ('message', (message) => {
 
     for (var i = 0; i < UserGreetings.length; i++) {
       if (m.content.startsWith(UserGreetings[i])) {
-        message.channel.send("Hello, " + message.author + "!")
+        message.channel.send("Hello, " + message.member.displayName + "!")
       }
     }  
 
     for (var i = 0; i < User_Leaving_Messages.length; i++) {
       if (m.content.startsWith(User_Leaving_Messages[i])) {
-        message.channel.send("Goodbye, " + message.author + "!")
+        message.channel.send("Goodbye, " + message.member.displayName + "!")
       }
     }
   //Greetings(Updated[0.5])-END
