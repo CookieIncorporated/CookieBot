@@ -1,6 +1,13 @@
 const Discord = require("discord.js");
+const commando = require('discord.js-commando')
 const bot =  new Discord.Client();
 const TOKEN = process.env.token
+
+bot.registry.registerGroup('simple')
+bot.registry.registerGroup('random');
+bot.registry.registerGroup('greetings');
+bot.registry.registerGroup('imagecommands');
+bot.registry.registerCommandsIn(__dirname + "/commands")
 
 bot.on('ready', () => {
     bot.user.setActivity('Cookie Clicker')
@@ -9,6 +16,8 @@ bot.on('ready', () => {
 
 bot.on('message', (message) => {
   if (message.author.bot) return;
+    
+  var m = message;
     
   UserGreetings = ['hello', 'Hello', 'HELLO', '!hello','!Hello','!HELLO','hi','Hi','HI','!hi','!Hi','!HI',
     'hey','Hey','HEY','!hey','!Hey','!HEY','im back','Im back',"I'm back",'hello!','Hello!','HELLO!','Hey!',
